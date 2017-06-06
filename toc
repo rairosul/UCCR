@@ -33,3 +33,7 @@ Continuous Release
 	Calendar events and tags
 		UCCR_events.md
 	{: .navgroup-end}
+
+	{: .navgroup id="help"}
+	UCCR_support.md
+	{: .navgroup-end}
