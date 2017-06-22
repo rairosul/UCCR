@@ -12,12 +12,12 @@ Continuous Release
 	Related links
 		[Continuous Release Bluemix service](https://www.console.ng.bluemix.net/catalog/services/continuous-release/)
 		[Download DevOps Connect](https://www.developer.ibm.com/urbancode/plugin/ibm-urbancode-sync-plugin-example/)
-		[Import a sample CSV file into a deployment plan](http://public.dhe.ibm.com/cloud/bluemix/uccr/)
+		[Import sample CSV file into a deployment plan](http://public.dhe.ibm.com/cloud/bluemix/uccr/)
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
 	{: .topicgroup}
-	Release events
+	Releases
 		UCCR_releases.md
 
 	{: .topicgroup}
@@ -30,7 +30,10 @@ Continuous Release
 		UCCR_tasks.md
 
 	{: .topicgroup}
-	Calendar events and tags
+	Events and tags
 		UCCR_events.md
 	{: .navgroup-end}
 
+	{: .navgroup id="help"}
+	UCCR_support.md
+	{: .navgroup-end}
