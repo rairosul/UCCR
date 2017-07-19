@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-6-22"
+lastupdated: "2017-7-14"
 
 ---
 
@@ -98,7 +98,7 @@ When you create an event type, graphical styles are automatically applied to the
 
 To create an event, complete the following steps:
 
-1. On the Releases page, click **Calendar settings** <img class="inline" src="images/cal-set.png"  alt="Calendar settings">.
+1. On the Releases page, click **Settings** <img class="inline" src="images/cal-set.png"  alt="Settings icon">.
 
 1. In the Configure calendar page, click **Add event type** <img class="inline" src="images/event-add.png"  alt="Add event type"> for the event category that you want to create.
 
@@ -129,18 +129,36 @@ To edit an event type name, click the **Edit** icon next to the event type's nam
 
 To delete an event type, click the **Delete** icon next to the name.
 
+## Setting event priority
+{: #events_priority}
+
+When multiple events of the same type are scheduled for the same day, the event type with the highest priority is displayed on the calendar. The existence of other events for that day is connoted by an underline beneath the date, as shown in this illustration. <img class="inline" src="images/event-cal-icons.png"  alt="Multiple events icon"> 
+
+Priority is determined by the order of event types within a category. The first or left-most event type has the highest priority followed by the second event type and so on.
+
+To change event priority, hover the mouse for the event type and then click the **Priority** arrow. In the following illustration, the **Enterprise release** type has a lower priority than the **Special** type. To promote the **Enterprise release** type to the highest priority, you click the left-pointing **Priority** arrow for the **Enterprise release**.
+
+![](images/event-priority.png "Event priority")
+Figure 3. Event priority
+
 ## Importing releases and events
 {: #events_importing}
 
-You can import your own releases and events.  To import items, define them in a comma-separated values (CSV) file. The CSV file format is a standard format that is used to exchange data between applications. In CSV files, each field in a record is separated by commas, and each record is on a separate row. Use the following format to define events and releases:  
+You can import your own releases and events. To import items, first define them in a comma-separated values (CSV) file. The CSV file format is a standard format that is used to exchange data between applications. In CSV files, the fields in a record are separated by commas, and each record is on a separate row. The first row in the file  must contain the following field labels:  
 
-`name*,description,start*,end,team*,tag`
+`name,description,start,end,team,tag`
 
 The following fields are required:
 
 `name,start,team`
 
-For example, `Holiday,New Years Day,1/1/18,1/1/18,my_team,National Holiday` 
+At a minimum, each record must contain valid values in the required fields. If the team does not exist or if you do not have access to the team, the file cannot be imported and an error message is displayed. [Create the team before you import the CSV file](UCCR_admin.html#admin_securityCreateTeams).
+
+The following code fragment contains a sample CSV record:
+  ```
+  name,description,start,end,team,tag
+  Holiday,New Years Day,1/1/18,1/1/18,my_team,National Holiday
+  ```
 
 To import events and releases, complete these steps:
 
@@ -148,7 +166,7 @@ To import events and releases, complete these steps:
 
 2. On the Import from CSV dialog box, select the CSV file that contains your releases and events, and then click **Import Events**. The dialog box provides a link where you can download a sample CSV event file.
 
-If the import is successful, the releases and events are displayed on the Releases page. If the value in the **tag** field contains a previously-defined event type, the event is displayed on the calendar. Otherwise, the value in the **tag** field is treated as a tag.
+If the import is successful, the releases and events are displayed on the Releases page. If the value in the **tag** field contains a previously-defined event type, the event is displayed on the calendar. Otherwise, the value in the **tag** field is treated as a tag. 
 
 ## Creating tags
 {: #events_tagManage}

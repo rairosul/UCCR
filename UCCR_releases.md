@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-6-22"
+lastupdated: "2017-6-30"
 
 ---
 
@@ -31,7 +31,7 @@ To create a release, complete the following steps:
 
 1. In the Create release window, in the **Name** field, enter a name for the release. A name is required.
 
-3. In the **Team** list, select a team to manage the release. You can add deployment plans from other teams to the release event, not just the team owned by the team that manages the release. All the teams that you belong to are available. A team is required.
+3. In the **Team** list, select a team to manage the release. You can add deployment plans from other teams to the release event, not just the team that manages the release. All the teams that you belong to are available. A team is required.
 
 3. In the **Start Time** field, select a starting date and time. Starting times are required for all releases.
 
@@ -43,7 +43,7 @@ To create a release, complete the following steps:
 
 5. Click **Save**.
 
-To display the release in the Activities list, ensure that the date range includes dates within the release's start or end times. 
+To display the release in the Activities list, ensure that the date range includes dates within the release's start or end times.
 
 After the release is created, you can add deployment plans, events, and tags to it.
 
