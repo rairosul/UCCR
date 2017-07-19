@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-6-22"
+lastupdated: "2017-7-17"
 
 ---
 
@@ -11,72 +11,76 @@ lastupdated: "2017-6-22"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Administering
-{: #admin_overview}
-
-Functional security
-{:shortdesc}
-
-Users are authenticated to Bluemix with their IBM web identity. For Bluemix Dedicated and Local, LDAP authentication is supported by default. [Overview of Bluemix security services](https://console.bluemix.net/docs/security/index.html)
-
-In {{site.data.keyword.uccr_short}}, you use organizations to enable collaboration among users and to facilitate the logical grouping of project resources. User security is managed on the Bluemix organization level.
-
-You can group a set of spaces, applications, services, domains, routes, and users together in organizations.
-You can manage the access to the spaces and organizations on a per-user basis.
-When you create an organization, the organization name must be unique in Bluemix. If the organization name is already in use by another Bluemix Public, Dedicated, or Local user, then you must specify a new name. After you create the organization, you will be automatically assigned the Organization Manager permission, which enables you to edit the organization name, add users, and create or delete spaces in the organization.
-
-Domains
-
-Spaces
-
-Within an organization, you can use spaces to group a set of applications, services, and users. Spaces are tied to a specific region in Bluemix.
-
-After you add users to an organization, you can grant them permissions to the spaces. Similar to organizations, spaces also have a set of user roles with specific permissions that are assigned to team members:
-
-admins
-control the security system and UCD protected environments. No UCD protected environments can be used until a user is added to UCD admin role for the protected resource (effetcs UCD only, not Bluemix).
-
-Control is on the org level--org manager. Can see users in the org. If the org admin is admin in more than pone org, he can include users from all his orgs.  
-
-
-# Managing user Security
+# Managing user security
 {: #admin_security}
 
-To create a a team, on the Manage teams page, click **New Team**, and enter name for the team. After you save the team, add users and user groups to it.
+The Continuous Release security model is team-based. Team members manage releases, events, and deployments. Administrators manage teams and assign users to them.
+{:shortdesc}
 
-1. On the Manage teams page, click **New Team**. If this is your first time creating a release event, click **Define a release to coordinate work**.
+Bluemix security is managed on the organization level. You use organizations to enable collaboration among users and to facilitate the logical grouping of project resources. Users are authenticated to Bluemix with their IBMid. [Follow this link for an overview of Bluemix security services](https://console.bluemix.net/docs/security/index.html).
 
-1. In the Create Release Event window, in the **Name** field, enter a name for the release.
+The team-based security model means that teams manage releases, events, and run deployments. Only team members can create or modify team-managed objects. Users can be assigned to more than one team. Users are identified by email address.
 
-3. In the **Team** list, select a team to manage the release. You can add deployment plans oowned by other teams to the release event, not just those owned by the team selected to manage the release. All the teams that you belong to are available.
+The manager of the organization that uses {{site.data.keyword.uccr_short}} is automatically a {{site.data.keyword.uccr_short}} administrator. The administrator manages the security system and manages teams. The administrator can assign any member of the Bluemix organization to a team. If an administrator is a member of several Bluemix organizations, they can manage users in all of the organizations.
 
-3. In the **Start Time** field, select a starting date and time. Starting times are required for all releases.
+After {{site.data.keyword.uccr_short}} is [integrated with IBM UrbanCode Deploy](index.html#gs_install_dc), UrbanCode Deploy teams and applications can be imported into {{site.data.keyword.uccr_short}}. When a team is imported, all team members are imported. Users are identified by email address. If an existing Bluemix account is found for an imported user, that account is used. If no existing Bluemix account is found, a {{site.data.keyword.uccr_short}} account is created. Administrators can also create users.
 
-3. In the **End Time** field, select an ending date and time.
+Before a user can do any meaningful work, he or she must have a Bluemix account. Users can create a Bluemix account by using their {{site.data.keyword.uccr_short}} user name, which is the same as their email address.
 
-3. In the **Tags** list, select a calendar event. You can select multiple calendar events. To create a tag instead, type the tag name in list field. Tags that you create with the Create Release Event window are not displayed on the calendar, which can help prevent calendar clutter. If you want your event to appear on the calendar, [select an event that is created on the Configure Calendar page](UCCR_events.html#events_tagCreate).
-
-5. Click **Save**.
-
-The release event is displayed in the Activities list. After the release is created, you can add deployment plans to it.
-
-## Creating teams
+## Managing teams
 {: admin_securityCreateTeams}
 
-To create a release event, complete the following steps:
+To prepare a team, you create the team and then add users or user groups to it. After you add users, you assign permissions to them.
 
-1. On the Releases page, click **Create release event**. If this is your first time creating a release event, click **Define a release to coordinate work**.
+To create a team and assign users, complete the following steps:
 
-1. In the Create Release Event window, in the **Name** field, enter a name for the release.
+1. On the Releases page, click **Settings** <img class="inline" src="images/cal-set.png"  alt="Settings icon">, and then click **Teams**.
 
-3. In the **Team** list, select a team to manage the release. You can add deployment plans oowned by other teams to the release event, not just those owned by the team selected to manage the release. All the teams that you belong to are available.
+1. On the Teams page, click **New Team**, and in the Add a New Team window, enter a name for the team, and then click **Save**.
 
-3. In the **Start Time** field, select a starting date and time. Starting times are required for all releases.
+3. With the team selected, click **Add member** to add a user or group.  
 
-3. In the **End Time** field, select an ending date and time.
+3. In the Add User or Group window, in the **User** list, select a user, and then click **Save**. The user is added to the **Members** list. Instead of selecting an existing user, administrators can create new users. To create a user, enter the user's email address. The email address is used as the user name.
 
-3. In the **Tags** list, select a calendar event. You can select multiple calendar events. To create a tag instead, type the tag name in list field. Tags that you create with the Create Release Event window are not displayed on the calendar, which can help prevent calendar clutter. If you want your event to appear on the calendar, [select an event that is created on the Configure Calendar page](UCCR_events.html#events_tagCreate).
+3. New team members have no permissions. To grant permissions to a user, with the team displayed, click the permission that you want to grant.
 
-5. Click **Save**.
+After a team is created, any team member can assign it to releases, events, and deployment plans.
 
-The release event is displayed in the Activities list. After the release is created, you can add deployment plans to it.
+## User permissions
+{: admin_securityPermissions}
+
+Permissions define the scope of user actions. Administrators assign permissions when they add users to teams. Permissions are granted to individual users or user groups. Users can have different permissions for different teams.
+
+New users have no granted permissions. Before users can do any meaningful work, they must be granted permissions. The permission types are described in this list:
+<ul>
+<li>The **PARTICIPANT** permission enables users to perform all product functions except manage the security system. Users with this permission can create releases and deployment plans, and run deployments.</li>
+<li>The **ADMIN** permission enables users to perform all product functions and manage the {{site.data.keyword.uccr_short}} security system. [To use UrbanCode Deploy applications with protected environments, a user must have this permission](#admin_securityUCDteams).</li>
+</ul>
+
+## Importing and managing IBM UrbanCode Deploy teams
+{: admin_securityUCDteams}
+
+When an UrbanCode Deploy team is imported, in addition to the roster of team members, all applications that are managed by the team are also imported. Imported applications can be used in any deployment that is managed by the team. If a user is a member of more than one team, they can use the applications from all of their teams. [Imported applications are managed with UrbanCode Deploy tasks](UCCR_tasks.html#tasks_UDTasks).
+
+ If an imported application has a protected environment, the environment cannot be used until a team member is granted the **ADMIN** permission.
+
+ If several imported users have the same email address, such as admins, only one user is created in {{site.data.keyword.uccr_short}}.
+
+## Managing user groups
+{: admin_securityGroups}
+
+You can combine users into groups. When you grant permissions to the group, you simultaneously grant them to the group members. When you assign a group to a team, all group members are simultaneously assigned to the team.
+
+To create a group, complete the following steps:
+
+1. On the Releases page, click **Settings** <img class="inline" src="images/cal-set.png"  alt="Settings icon">, and then click **Groups**.
+
+1. On the Groups page, click **New Group**, and in the Add New Group window, enter a name for the group, and then click **Save**.
+
+3. With the group selected, click **Add user**.  
+
+3. In the **User** list, select a user, and then click **Save**. The user is added to the **Members** list. You can add a user by typing the user's email address. The email address is used as the user name.
+
+Groups cannot be imported from UrbanCode Deploy.
+
+
