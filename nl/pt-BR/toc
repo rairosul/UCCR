@@ -1,0 +1,38 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="UCCR" audience="service" href="/docs/services/UCCR/index.html"}
+Continuous Release
+
+	{: .navgroup id="learn"}
+	index.md
+	UCCR_overview.md
+
+	{: .topicgroup}
+	Links Relacionados
+[Serviço Bluemix Continuous Release](https://www.console.ng.bluemix.net/catalog/services/continuous-release/)
+[Fazer download do DevOps Connect](https://www.developer.ibm.com/urbancode/plugin/ibm-urbancode-sync-plugin-example/)
+[Importar arquivo CSV de amostra em um plano de implementação](http://public.dhe.ibm.com/cloud/bluemix/uccr/)
+	{: .navgroup-end}
+
+	{: .navgroup id="howto"}
+	{: .topicgroup}
+	Liberações
+		UCCR_releases.md
+
+	{: .topicgroup}
+	Planos de implementação
+		UCCR_deployPlan.md
+		UCCR_deployRun.md
+
+	{: .topicgroup}
+	Tarefas
+		UCCR_tasks.md
+
+	{: .topicgroup}
+	Eventos e tags UCCR_events.md
+	{: .navgroup-end}
+
+	{: .navgroup id="help"}
+	UCCR_support.md
+	{: .navgroup-end}

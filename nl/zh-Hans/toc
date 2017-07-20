@@ -1,0 +1,39 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="UCCR" audience="service" href="/docs/services/UCCR/index.html"}
+Continuous Release
+
+	{: .navgroup id="learn"}
+	index.md
+	UCCR_overview.md
+
+	{: .topicgroup}
+	相关链接
+		[Continuous Release Bluemix 服务](https://www.console.ng.bluemix.net/catalog/services/continuous-release/)
+		[下载 DevOps Connect](https://www.developer.ibm.com/urbancode/plugin/ibm-urbancode-sync-plugin-example/)
+		[将样本 CSV 文件导入到部署计划](http://public.dhe.ibm.com/cloud/bluemix/uccr/)
+	{: .navgroup-end}
+
+	{: .navgroup id="howto"}
+	{: .topicgroup}
+	发布
+		UCCR_releases.md
+
+	{: .topicgroup}
+	部署计划
+		UCCR_deployPlan.md
+		UCCR_deployRun.md
+
+	{: .topicgroup}
+	任务
+		UCCR_tasks.md
+
+	{: .topicgroup}
+	事件和标记
+		UCCR_events.md
+	{: .navgroup-end}
+
+	{: .navgroup id="help"}
+	UCCR_support.md
+	{: .navgroup-end}
