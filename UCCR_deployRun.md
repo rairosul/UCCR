@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-6-22"
+lastupdated: "2017-7-8"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-6-22"
 Use {{site.data.keyword.uccr_short}} to run software deployments. Complete deployments by resolving the tasks in a deployment plan.
 {:shortdesc}
 
-A deployment starts when one of the plan's eligible tasks starts. A scheduled deployment starts automatically at the scheduled time if one of its eligible tasks is an auto task, such as UrbanCode Deploy or Delayed-type tasks. Otherwise, begin a deployment by starting one of the plan's eligible tasks. If the plan contains several eligible tasks, you can start any of them. You can manually start a deployment at any time. You can manually start a scheduled deployment before its scheduled time.   
+A deployment starts when one of the plan's eligible tasks starts. A scheduled deployment starts automatically at the scheduled time if one of its eligible tasks is an auto task, such as UrbanCode Deploy tasks. Otherwise, begin a deployment by starting one of the plan's eligible tasks. If the plan contains several eligible tasks, you can start any of them. You can manually start a deployment at any time. You can manually start a scheduled deployment before its scheduled time.   
 
 The deployment plan's execution pattern determines when tasks are eligible to start. If the plan has the sequential execution pattern, which is the default pattern, tasks become eligible in the order in which they are listed in the plan, starting with the first task. After the first task resolves, the second task becomes eligible. Start eligible manual tasks by clicking the task's **Start** button. Auto tasks, such as UrbanCode Deploy tasks, start automatically as soon as they become eligible.
 

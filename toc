@@ -24,10 +24,21 @@ Continuous Release
 	Deployment plans
 		UCCR_deployPlan.md
 		UCCR_deployRun.md
+		UCCR_deployNotifications.md
 
 	{: .topicgroup}
 	Tasks
 		UCCR_tasks.md
+		UCCR_tasksManual.md
+		UCCR_tasksUCD.md
+		UCCR_tasksPipeline.md
+		UCCR_tasksDelayed.md
+		UCCR_tasksHeader.md
+		UCCR_tasksEmail.md
+		UCCR_tasksAnother.md
+		UCCR_tasksSlack.md
+		UCCR_tasksServiceNow.md
+		UCCR_tasksWaitApproval.md
 
 	{: .topicgroup}
 	Events and tags
