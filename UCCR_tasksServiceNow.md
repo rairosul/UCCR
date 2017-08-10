@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-8-9"
+lastupdated: "2017-8-10"
 
 ---
 
@@ -32,7 +32,7 @@ To create a ServiceNow task, complete the following steps:
 
 3. In the **Connection settings** area, enter the URL of the ServiceNow instance, and the user ID, and password of the ServiceNow user.
 
-3. In the **Action** list, select the action type for the task, and then complete the parameters for the specific action, as described in the following tables.
+3. In the **Action** list, select the action type for the task. The types are create, wait, and update. After you select the type, complete the action-specific parameters, as described in the following tables.
 
 | Create action | Description |
 | ------------------ |------------------|
@@ -40,7 +40,7 @@ To create a ServiceNow task, complete the following steps:
 | Short description                 | The text you enter is displayed in the ServiceNow ticket's **Short description** field. |
 | Assignment group                 | The ServiceNow agent or group responsible for resolving the ServiceNow ticket. Possible assignees include agents and groups available to the ServiceNow instance.|
 | Additional properties                 | The ticket properties set by this task. Each property is a field-value pair. Separate properties by commas. Enclose the properties in braces `{}`. For example, a simple approval request might look light the following fragment: ``{"approval":"requested", "state": -4, "description":"Application: MSRP Manager - v1", "category":"Applications Software", "impact": 3}``. |
-| Output property                 | Captures the ServiceNow ticket ID. For example, if you specify `'service_now_stage_ticket_id'`, you can use it with update and wait actions to identify the ticket. |
+| Output property                 | Captures the ServiceNow ticket ID. For example, if you specify `'service_now_stage_ticket_id'`, you can use it with update and wait actions to identify the ticket. This property can be used by other ServiceNow tasks in any deployment plan in the release. |
 
 | Update action | Description |
 | ------------------ |------------------|
