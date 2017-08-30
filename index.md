@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-6-22"
+lastupdated: "2017-8-30"
 
 ---
 
@@ -32,21 +32,25 @@ The {{site.data.keyword.uccr_full}} service on IBM {{site.data.keyword.Bluemix_s
 
 1. [Create a release](/docs/services/UCCR/UCCR_releases.html##releases_create) and assign it to one of your teams. Any team member can create deployment plans for the release and run deployments.
 
-1. Add a deployment plan to the release.
+1. Modify the deployment plan attached to the release. When you create a release, you can select templates, in which case a deployment plan is created for each selected template. If you don't select a template, releases begin with a deployment plan named `Plan:release_name`. [You can create additional deployment plans after you save a release](/docs/services/UCCR/UCCR_releases.html#releases_planAdd). 
 
-  * [Create the plan](/docs/services/UCCR/UCCR_releases.html#releases_planAdd) and assign it to the release. 
-
-  * [Add tasks to the deployment plan](/docs/services/UCCR/UCCR_tasks.html#tasks_create). Each task is listed on a separate row in the deployment plan. Try adding different types of tasks: manual, UrbanCode Deploy, Continuous Delivery pipeline, delay, Email, and Slack.
+  * [Add tasks to the default deployment plan](/docs/services/UCCR/UCCR_tasks.html#tasks_create). Each task is listed on a separate row in the deployment plan. Try adding different types of tasks: manual, UrbanCode Deploy, Continuous Delivery pipeline, delay, Email, Wait for approval, ServiceNow, Run another plan, Header, and Slack.
 
   * You can modify the list of tasks in the plan in various ways. You can reposition tasks, copy tasks, and delete them. 
 
-4. When your deployment plan is ready, run a deployment by using the deployment plan that you created in the previous step.
+3. When your deployment plan is ready, run a deployment by using the deployment plan that you created in the previous step.
 
   * [You run a deployment by resolving the tasks in a deployment plan](/docs/services/UCCR/UCCR_deployRun.html). Resolve tasks by starting them and then changing their status to `Complete`, `Fail`, or `Skipped`. After all the tasks in a deployment plan are resolved, the deployment has a status of Done.
 
-  * Tasks can be started when they are eligible to start. Eligibility is determined by the plan's execution pattern. By default, a plan's execution pattern is sequential. Initially, the first, or topmost, task is eligible to start. You can modify the execution pattern by grouping tasks. A task group can have a parallel execution pattern, which means that the group's tasks can be started in any order and can run simultaneously. A deployment plan can have multiple groups and groups nested within other groups.
+  * Tasks can be started when they are eligible to start. Eligibility is determined by the plan's execution pattern. By default, a plan's execution pattern is sequential. Initially, the first, or topmost, task is eligible to start.
 
-  * Some tasks, called auto tasks, start automatically as soon as they are eligible to run. UrbanCode Deploy and Continuous Delivery pipeline type tasks start as soon as they are eligible, without manual intervention. Auto tasks also update their status without manual intervention.  
+  * Most tasks, called auto tasks, start automatically as soon as they are eligible to run. Auto tasks also update their status without manual intervention.
+
+4. After the deployment is complete, save the deployment plan as a template.
+
+  * Create a release with the template. After you become familiar with {{site.data.keyword.Bluemix_short}}, you will be able to quickly create complicated releases based on your collection of templates.
+  
+  * [Define properties in your plan templates. Tasks in a release can reference the properties defined in any plan in the parent release.](/docs/services/UCCR/UCCR_property_ref.html).
 
 ## Installing and configuring DevOps Connect
 {: #gs_install_dc}

@@ -43,12 +43,17 @@ Continuous Release
 	{: .topicgroup}
 	Events and tags
 		UCCR_events.md
+		
+	{: .topicgroup}
+	Properties
+		UCCR_property_ref.md
 	
 	{: .topicgroup}
 	Security
 		UCCR_admin.md
 	{: .navgroup-end}
 
+	
 	{: .navgroup id="help"}
 	UCCR_support.md
 	{: .navgroup-end}

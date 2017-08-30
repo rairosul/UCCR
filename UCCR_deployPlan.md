@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-6-22"
+lastupdated: "2017-8-30"
 
 ---
 
@@ -115,7 +115,7 @@ To promote a plan, use the **Promote this plan** action On the Deployment Plan p
 
 You can convert deployment plans to create deployment plan templates.
 
-To create a template, use the **Template this plan** action On the Deployment Plan page. When you create a template, a new plan with the name "Copy of plan_name' is inserted into the Deployment Plan page. The status of a template is `template` even if the original plan has a status of `done` or `in progress`. The template contains all the tasks that are defined in the original plan. If UrbanCode Deploy tasks are in the plan, the applications selected in the original are also selected in the template.
+To create a template, use the **Template this plan** action On the Deployment Plan page. When you create a template, a new plan with the name "Copy of plan_name" is inserted into the Release page. The status of a template is `template` even if the original plan has a status of `done` or `in progress`. The template contains all the tasks that are defined in the original plan. If UrbanCode Deploy tasks are in the plan, the applications selected in the original are also selected in the template.
 
 You cannot run deployments with templates. To use a template for a deployment, first copy or promote it and then use the copied or promoted plan.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-8-10"
+lastupdated: "2017-8-28"
 
 ---
 
@@ -19,6 +19,13 @@ A ServiceNow task can create and update ServiceNow change request tickets. A Ser
 * **Create** creates a ServiceNow change request ticket. You can set the values for all ticket fields, and pass the ticket ID to update, and wait requests.
 * **Update** can update the values for all ticket fields.
 * **Wait** waits for a particular value in a specific field. The field can be any field on the change request.
+
+ServiceNow task prerequisites:
+<ul>
+<li>ServiceNow tasks work with internet-accessible instances of ServiceNow, such as <code>my_instance.service-now.com</code>.</li>
+<li>ServiceNow tasks work with the Jakarta release of ServiceNow, and references the current API version.</li>
+<li>The user supplying credentials for the task must have access to the ServiceNow API, and permission to see all change request attributes.</li>
+</ul>
 
 To create a ServiceNow task, complete the following steps:
 
@@ -39,7 +46,7 @@ To create a ServiceNow task, complete the following steps:
 | Request type | You can use the ServiceNow default types or a user-created type. Default types are normal, emergency, and standard.|
 | Short description                 | The text you enter is displayed in the ServiceNow ticket's **Short description** field. |
 | Assignment group                 | The ServiceNow agent or group responsible for resolving the ServiceNow ticket. Possible assignees include agents and groups available to the ServiceNow instance.|
-| Additional properties                 | The ticket properties set by this task. Each property is a field-value pair. Separate properties by commas. Enclose the properties in braces `{}`. For example, a simple approval request might look light the following fragment: ``{"approval":"requested", "state": -4, "description":"Application: MSRP Manager - v1", "category":"Applications Software", "impact": 3}``. |
+| Additional properties                 | The ticket properties set by this task. Each property is a field-value pair. Separate properties by commas. Enclose the properties in braces `{}`. For example, a simple approval request might look light the following fragment: ``{"approval":"requested", "state": -4, "description":"Application: MSRP Manager - v1", "category":"Applications Software", "impact": 3}``. [See the Properties reference for information about properties](/docs/services/UCCR/UCCR_property_ref.html#property_overview)|
 | Output property                 | Captures the ServiceNow ticket ID. For example, if you specify `'service_now_stage_ticket_id'`, you can use it with update and wait actions to identify the ticket. This property can be used by other ServiceNow tasks in any deployment plan in the release. |
 
 | Update action | Description |
