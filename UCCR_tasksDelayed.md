@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-8-4"
+lastupdated: "2017-8-29"
 
 ---
 
@@ -26,9 +26,13 @@ Complete the following tasks to create a delayed task:
 
 1. In the **Name** field, enter a name for the task.
 
+1. In the **Delay type** field, select the method used to determine the length of the delay.
+
 3. In the **Time** field, enter or select the time that the task will be completed.
 
-3. In the **Time Zone** list, select the time zone for the value that is entered in the **Time** field.    
+3. In the **Time Zone** list, select the time zone for the value that is entered in the **Time** field.
+
+3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in list's text field.
 
 5. Click **Save**. The task is inserted into the deployment plan.
 

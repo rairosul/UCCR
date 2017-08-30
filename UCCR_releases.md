@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-6-30"
+lastupdated: "2017-8-30"
 
 ---
 
@@ -14,11 +14,13 @@ lastupdated: "2017-6-30"
 # About releases
 {: #releases_overview}
 
-A release is a container for deployment plans, events, and tags.
+A release is a container for deployment plans, events, and properties.
 
 {:shortdesc}
 
 Typically, a release contains deployment plans and events that are related in some business-meaningful way. For example, the deployment plans might represent the phases in a software development lifecycle, such as development, QA, and production. An event might represent a blackout that affects the release.
+
+If a deployment plan in a release has user-defined properties, the tasks in the release's other deployment plans can reference them. In other words, properties have release scope.
 
 If you add events to a release, you can use the calendar to filter the Releases page to display releases and deployment plans.
 
@@ -29,19 +31,21 @@ To create a release, complete the following steps:
 
 1. On the Releases page, click **Create release**.
 
-1. In the Create release window, in the **Name** field, enter a name for the release. A name is required.
+1. In the Create release window, in the **Name** field, enter a name for the release. This field can be referenced with the `${sys:release.name}` system property. A name is required.
+
+3. In the **Tags** list, select an event or tag. You can select multiple items.  If you want the event to appear on the calendar, [select an event that is created on the Configure Calendar page](UCCR_events.html#events_tagCreate). Optionally, you can create a tag by typing the tag name in **Tags** field. Tags that you create with the Create release window are not displayed on the calendar, which can prevent calendar clutter.
+
+3. In the **Description** field, describe the release. This field can be referenced with the `${sys:release.description}` system property.
+
+3. In the **Deployment plan templates** list, select a template to add to the release. You can select multiple items.  Each template that you select, adds a deployment plan to the release with the name "Copy of template_name." [You can convert any deployment plan into a template.](UCCR_deployPlan.html#plan_templates) If the selected templates have user-defined properties, you are prompted to provide values for them when you save the release.
+
+3. In the **Start Time** field, select a starting date and time. This field can be referenced with the `${sys:release.start}` system property. Starting times are required for all releases.
+
+3. In the **End Time** field, select the ending date and time. This field can be referenced with the `${sys:release.end}` system property.
 
 3. In the **Team** list, select a team to manage the release. You can add deployment plans from other teams to the release event, not just the team that manages the release. All the teams that you belong to are available. A team is required.
 
-3. In the **Start Time** field, select a starting date and time. Starting times are required for all releases.
-
-3. In the **End Time** field, select the ending date and time.
-
-3. In the **Tags** list, select an event or tag. You can select multiple items.  If you want the event to appear on the calendar, [select an event that is created on the Configure Calendar page](UCCR_events.html#events_tagCreate).
-
-1. Optionally, you can create a tag by typing the tag name in **Tags** field. Tags that you create with the Create release window are not displayed on the calendar, which can prevent calendar clutter.
-
-5. Click **Save**.
+6. If the selected templates have properties, click **Next**, and then provide values for the properties. Otherwise, click **Save and view details** to save the release and open the release details page. If you added templates to the release, a deployment plan for each template is created and displayed. If you didn't select any templates, an empty deployment plan is added to the release with the name "Plan:release_name."
 
 To display the release in the Activities list, ensure that the date range includes dates within the release's start or end times.
 

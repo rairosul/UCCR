@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-6-22"
+lastupdated: "2017-8-30"
 
 ---
 
@@ -61,7 +61,7 @@ You assign the parallel pattern to groups when you create the groups. The expect
 
 **Process**: Refers to UrbanCode Deploy application processes. In UrbanCode Deploy, processes define automation activities, such as deploying components. In {{site.data.keyword.uccr_short}}, when you run UrbanCode Deploy tasks, you select the process. You can select the process when you create the task or at run time.
 
-**Tag**: A tag is a label that you can apply to tasks or releases. When applied to tasks, tags can determine task applicablity for a given deployment. When applied to releases, tags can be used to organize and filter releases.
+**Tag**: A tag is a label that you can apply to tasks or releases. When applied to tasks, tags can determine task applicability for a given deployment. When applied to releases, tags can be used to organize and filter releases.
 
 **Task group**: You can combine two or more tasks into a task group. When you form a group, you define the group's execution pattern, either sequential or parallel.
 
@@ -97,9 +97,15 @@ You can define several types of tasks.
 </li>
 <li>Slack tasks send messages to a user-specified Slack channel.
 </li>
-<li>Continuous Delivery pipeline tasks automate your DevOps workflows. You can manage your pipelines with pipeline tasks.
+<li>Continuous Delivery pipeline tasks automate your DevOps work flows. You can manage your pipelines with pipeline tasks.
+</li>
+<li>Run another plan tasks start deployments for other deployments plans in the parent release. 
+</li>
+<li>ServiceNow tasks enable you to create and manage ServiceNow change requests.
+</li>
+<li>Wait for approval tasks pause the deployment until the required approvers have given their approval.
 </li>
 </ul>
 
 **Release**:
-A release is a container for deployment plans, events, and tags. Generally, a release contains several deployment plans although there is no requirement that a release contain more than one plan. Speaking generally again, each plan in a release represents a stage in the development lifecycle, such as QA or Production. The stages, or deployment plans, are collectively referred to as the release lifecycle.
+A release is a container for deployment plans, events, and properties. Generally, a release contains several deployment plans although there is no requirement that a release contain more than one plan. Speaking generally again, each plan in a release represents a stage in the development lifecycle, such as QA or Production. The stages, or deployment plans, are collectively referred to as the release lifecycle.
