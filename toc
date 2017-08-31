@@ -36,7 +36,7 @@ Continuous Release
 		UCCR_tasksHeader.md
 		UCCR_tasksEmail.md
 		UCCR_tasksAnother.md
-		UCCR_tasksSlack.md
+		<!-- UCCR_tasksSlack.md -->
 		UCCR_tasksServiceNow.md
 		UCCR_tasksWaitApproval.md
 
