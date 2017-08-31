@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-8-30"
+lastupdated: "2017-8-31"
 
 ---
 
@@ -32,25 +32,25 @@ The {{site.data.keyword.uccr_full}} service on IBM {{site.data.keyword.Bluemix_s
 
 1. [Create a release](/docs/services/UCCR/UCCR_releases.html##releases_create) and assign it to one of your teams. Any team member can create deployment plans for the release and run deployments.
 
-1. Modify the deployment plan attached to the release. When you create a release, you can select templates, in which case a deployment plan is created for each selected template. If you don't select a template, releases begin with a deployment plan named `Plan:release_name`. [You can create additional deployment plans after you save a release](/docs/services/UCCR/UCCR_releases.html#releases_planAdd). 
+1. Open the Release Detail page and modify the default deployment plan. When you create a release, you can select templates. Each template adds a deployment plan to the release. If you don't select a template, as in our case, a release starts with a deployment plan named `Plan:release_name`. [You can create additional deployment plans after you save a release](/docs/services/UCCR/UCCR_releases.html#releases_planAdd). 
 
-  * [Add tasks to the default deployment plan](/docs/services/UCCR/UCCR_tasks.html#tasks_create). Each task is listed on a separate row in the deployment plan. Try adding different types of tasks: manual, UrbanCode Deploy, Continuous Delivery pipeline, delay, Email, Wait for approval, ServiceNow, Run another plan, Header, and Slack.
+  * [Add tasks to the default deployment plan](/docs/services/UCCR/UCCR_tasks.html#tasks_create). Each task is listed on a separate row in the deployment plan. Try adding different types of tasks: manual, UrbanCode Deploy, Continuous Delivery pipeline, delay, Email, Wait for approval, ServiceNow, Run another plan, and Header.
 
-  * You can modify the list of tasks in the plan in various ways. You can reposition tasks, copy tasks, and delete them. 
+  * [You can modify the list of tasks in the plan in various ways. You can reposition tasks, copy tasks, and delete them](/docs/services/UCCR/UCCR_tasks.html#tasks_moveCopy). 
 
 3. When your deployment plan is ready, run a deployment by using the deployment plan that you created in the previous step.
 
   * [You run a deployment by resolving the tasks in a deployment plan](/docs/services/UCCR/UCCR_deployRun.html). Resolve tasks by starting them and then changing their status to `Complete`, `Fail`, or `Skipped`. After all the tasks in a deployment plan are resolved, the deployment has a status of Done.
 
-  * Tasks can be started when they are eligible to start. Eligibility is determined by the plan's execution pattern. By default, a plan's execution pattern is sequential. Initially, the first, or topmost, task is eligible to start.
+  * Tasks can start when they are eligible to start. Eligibility is determined by the plan's execution pattern. By default, a plan's execution pattern is sequential. The first, or topmost, task is eligible and the other tasks become eligible in list-order.
 
   * Most tasks, called auto tasks, start automatically as soon as they are eligible to run. Auto tasks also update their status without manual intervention.
 
 4. After the deployment is complete, save the deployment plan as a template.
 
-  * Create a release with the template. After you become familiar with {{site.data.keyword.Bluemix_short}}, you will be able to quickly create complicated releases based on your collection of templates.
+  * [Define properties in your plan templates. Deployment plans created from templates contain the properties defined in template.](/docs/services/UCCR/UCCR_property_ref.html).
   
-  * [Define properties in your plan templates. Tasks in a release can reference the properties defined in any plan in the parent release.](/docs/services/UCCR/UCCR_property_ref.html).
+  * Create a release with the template. After you become familiar with {{site.data.keyword.uccr_short}}, you will be able to quickly create complicated releases based on your template collection.
 
 ## Installing and configuring DevOps Connect
 {: #gs_install_dc}

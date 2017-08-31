@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-8-30"
+lastupdated: "2017-8-31"
 
 ---
 
@@ -95,8 +95,8 @@ You can define several types of tasks.
 </li>
 <li>Email tasks send messages to email accounts.
 </li>
-<li>Slack tasks send messages to a user-specified Slack channel.
-</li>
+<!-- <li>Slack tasks send messages to a user-specified Slack channel.
+</li> -->
 <li>Continuous Delivery pipeline tasks automate your DevOps work flows. You can manage your pipelines with pipeline tasks.
 </li>
 <li>Run another plan tasks start deployments for other deployments plans in the parent release. 

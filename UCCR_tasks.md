@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-8-8"
+lastupdated: "2017-8-31"
 
 ---
 
@@ -28,9 +28,9 @@ Most tasks have a starting and ending point, and a measurable duration.  A task 
 <li>A **Header** task is an organizational element. For example, you might use a header task to identify a task group.</li>
 <li>An **Email** task sends an email message when it runs.</li>
 <li>A **Run another plan** task runs deployments for other deployment plans participating in the same release event. This is an experimental task type.</li>
-<l1>A **Slack** task sends a message to a Slack channel when it runs. </l1>
-<l1>A **ServiceNow** can create and manage ServiceNow tickets.</l1>
-<l1>A **Wait for approval** pauses a deployment until designated users approve the task.</l1>
+<!-- <li>A **Slack** task sends a message to a Slack channel when it runs. </li> -->
+<li>A **ServiceNow** can create and manage ServiceNow tickets.</li>
+<li>A **Wait for approval** pauses a deployment until designated users approve the task.</li>
 </ul>
 
 You can add tasks to deployment plans by creating tasks or you can import tasks from CSV files that are created by IBM UrbanCode Release or another application. You can also copy tasks from other deployment plans. See [Importing tasks](/docs/services/UCCR/UCCR_deployPlan.html#plan_importTasks) for information about the format of the CSV file.
@@ -62,6 +62,10 @@ Each task in a deployment plan is contained in a separate row. The information t
 | Dependencies               |Indicates the number of tasks that are prerequisites for the task, and dependent on the task        |
 
 ---
+
+## Moving, copying, and deleting tasks
+{: #tasks_moveCopy}
+
 After tasks are added to deployment plans, you can manage them in several ways.
 
 To move a task, click anywhere on the task and drag it to a new location.
