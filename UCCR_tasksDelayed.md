@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-8-29"
+lastupdated: "2017-9-1"
 
 ---
 
@@ -26,13 +26,7 @@ Complete the following tasks to create a delayed task:
 
 1. In the **Name** field, enter a name for the task.
 
-1. In the **Delay type** field, select the method used to determine the length of the delay.
-
-3. In the **Time** field, enter or select the time that the task will be completed.
-
-3. In the **Time Zone** list, select the time zone for the value that is entered in the **Time** field.
-
-3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in list's text field.
+1. In the **Delay type** field, select the method used to determine the length of the delay. If you select **Delay by selecting a time and time zone**, use the **Time** and **Time Zone** fields to specify when the task will complete. Otherwise, enter a property name in the **Delay property** field. The property value can be set at run-time when the deployment starts. [See the Properties reference for information about properties](/docs/services/UCCR/UCCR_property_ref.html#property_overview)
 
 5. Click **Save**. The task is inserted into the deployment plan.
 
