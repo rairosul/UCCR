@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-8-30"
+lastupdated: "2017-9-1"
 
 ---
 
@@ -14,16 +14,16 @@ lastupdated: "2017-8-30"
 # Managing properties
 {: #property_overview}
 
-A deployment plan can contain user-defined properties. Properties can contain variable data values that can be defined at design- or run-time.
+A deployment plan can contain user-defined properties. Properties contain variable data values that can be defined at design- or run-time.
 
 {:shortdesc}
 
-Tasks can reference properties defined in their parent deployment plan. If a deployment plan is part of a release, its tasks can reference properties defined in the other plans in the release. In addition to the properties that you create, system properties are available to all plans.
+Tasks can reference properties defined in their parent deployment plan. In addition to the properties that you create, system properties are available to all plans.
 
 ## Creating properties
 {: #property_create}
 
-You define properties with the Deployment plan detail page's **Properties** tab. You can create a property before you use it, or you can create a property by first referencing it in a task, and then later defining the attributes.
+You define properties with the Deployment plan detail page **Properties** tab. You can create a property before you use it, or you can create a property by first referencing it in a task, and then later defining its attributes. If you create a property by reference, it appears as text-type property on the **Properties** tab. 
 
 To create a property, complete the following steps:
 
@@ -34,17 +34,20 @@ To create a property, complete the following steps:
 2. In the **Label** field, enter the label. The label appears in the UI.
 
 3. In the **Type** list, select the property type. The available types are described in this list:
-- `Text`
-- `Text area`
-- `Date and time`. Values are replaced by a string with the following format `day, month, year, time`. For example, `Thursday, January 1st 1970, 12:00 am UTC`. **Note**: When a `Date and time` property is used in a ServiceNow task, the value is replaced with the date and time  format expected by ServiceNow.
+
+  <ul>
+  <li><code>Text</code></li>
+  <li><code>Text area</code></li>
+  <li><code>Date and time</code>. Values are replaced by a string with the following format <code>day, month, year, time</code>. For example, <code>Thursday, January 1st 1970, 12:00 am UTC</code>. Note: When a <code>Date and time</code> property is used in a ServiceNow task, the value is replaced with the date and time format expected by ServiceNow.</li>
+  </ul>
 
 5. In the **Value** field, you can enter an initial value for the property.
 
-5. In the **Default value** field, enter a value for the property. The default value is used unless the user sets another value for the property. You can leave this field blank.
+5. In the **Default value** field, enter a value for the property. This value is used unless the user sets the value. You can leave this field blank.
 
-6. If you want users to supply a value when they create a release that contains the property, check **Prompt for this property at release creation at the specified sequence position**.
+6. If you want users to supply a value for the property when they create a release, check **Prompt for this property at release creation at the specified sequence position**.
 
-6. In the **Display sequence position** list, select a position for the property in the list of properties.
+6. In the **Display sequence position** list, select a position for the property. This value affects the property's position on the **Properties** tab.
 
 6. Click **Save**. 
 
@@ -59,8 +62,6 @@ Properties can be used by the following task types:
 - [Email](/docs/services/UCCR/UCCR_tasksEmail.html). You might reference a system property in the **Email subject** field like this example: `${sys:release.name}` is complete!
 - [Delayed](/docs/services/UCCR/UCCR_tasksDelayed.html). You might reference user-created property in the **Delay property** field like this example: `${prodTarget}`. In this example, the task delays until the value in the `${prodTarget}` property is reached.
 <!--- [Wait for approval](/docs/services/UCCR/UCCR_tasksWaitApproval.html)-->
-
-If you create a property by referencing it in a task, it appears as text-type property on the **Properties** tab. 
 
 You set most property values with the **Properties** tab. Some property values are set by external systems, such as ServiceNow.
 
